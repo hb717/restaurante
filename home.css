@@ -1,0 +1,82 @@
+/****************************/
+/* CSS da página home.php */
+/****************************/
+
+/*
+#formHTML {
+	width: 600px;
+	margin: auto;
+}
+
+content p {
+	overflow: auto;
+	padding: 0.7rem;
+	margin: 0;
+}
+content p:nth-child(odd) {
+	background: #dddddd;
+}
+content label[for] {
+	display: block;
+	float: left;
+	width: 130px;
+	text-align: right;
+	padding-right: 0.5rem;
+}
+content input[type=text] {
+	width: 350px;
+}
+content #formCPF {
+	width: 150px;
+}
+content #formSenha {
+	width: 100px;
+	color: #ffffff;
+}
+content #formEmail {
+	width: 200px;
+}
+content textarea {
+	font-family: inherit;
+	width: 350px;
+	height: 6rem;
+}
+content button {
+	color: #ffffff;
+	border: 0;
+	border-radius: 4px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+content button[type=submit] {
+	background: #0000ff;
+}
+content button[type=reset] {
+	float: right;
+	background: #ff0000;
+}
+
+*/
+
+.HomeContainer {
+	display: flex; 
+	width: 100%;
+}
+.HomeTexto1 {
+	width: 30%;
+    background-color: silver;
+	border: 2px solid white;
+}
+.HomeTexto2 {
+	width: 70%;
+	background: #eeeeee;
+	border: 2px solid white;
+	height:100%;
+	font-family: arial;
+	color: blue;	
+}
+
+.HomeContainer p {
+	padding: 0.5rem;
+}
+

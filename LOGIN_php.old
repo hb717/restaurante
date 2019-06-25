@@ -1,0 +1,64 @@
+<?php
+	$msg = null;
+	if (isset($_POST["enviar"])) {
+		$email = $_POST["email"];
+		$password = $_POST["password"];
+		if ($email == "admin@rj.senac.br" && $password == "123456") {
+			session_start(); // inicializa o uso de session na página.
+			session_cache_expire(60); // tempo de expiração da session
+			$_SESSION["email_logado"] = $email; // variavel de sessão
+			header("Location:index_php.php"); //redirecionamento para outra página
+			echo "usuario logado";
+		} else {
+			$msg = "Email e Senha incorretos";
+			/* echo "senha incorreta"; */
+			echo "<script> alert('Usuário Não cadastrado ou Senha incorreta');</script>"; 
+		}
+	}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"><!-- Acentuação correta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Página responsiva -->
+	<title>Título da Página</title><!-- Título da página -->
+	<link rel="stylesheet" href="css/css.css"><!-- Folhas de estilo globais -->
+	<link rel="stylesheet" href="<?php echo $css; ?>"><!-- Folhas de estilo desta página -->	
+	<style>
+#texto{
+	width:900px;
+	height:150px;
+	border: 2px solid blue;
+	margin:auto;
+	margin-bottom:40px;
+	margin-top:40px;
+	
+	font-family:arial;
+	font-size:16px;
+	line-height:20px;
+	padding: 1em 2em 3em;
+}	
+	</style>
+</head>
+
+<body>
+
+	<!-- Cabeçalho da página -->
+	<header>
+		<div class="headerLogo"><h1><img src="img/const15.gif" height="95" alt="Projeto Aula 5"><a href="/" title="Projeto de Site em PHP"></a></h1></div>
+		<div class="headerTitle"><h1><a href="/" title="Estudo em CSS3, HTML5 e PHP">Aula 5<h5>Introdução à Programação PHP</h5></a></h1></div>
+
+	</header>
+	<div id="texto">
+	<!-- GET modo de envio, action = destino -->
+	<h2>Página de Login</h2>
+	<form method="POST" action=login.php>
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" /><BR><BR>
+		<label for="password" >Senha</label>
+		<input type="text" name="password" id="password" /><BR><BR>
+		<input type ="submit" name="enviar" id="enviar"  value="enviar" />
+	</form>
+	</div>
+</body>
+</html>

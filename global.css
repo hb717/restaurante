@@ -1,0 +1,77 @@
+	/* Normalizando as tags HTML5 */
+	
+	main, header, nav, content, footer {
+		/* Converte as tags de "inline" para "bloco". Funcionam como DIV */
+		display: block;
+	}
+
+/* Estilos do cabeçalho */
+header {
+	background-color: rgba(0,50,255,0.8);
+	color: rgb(255, 255,255);
+	overflow: auto;
+	display: flex;
+	align-items: center;
+
+}	
+header h1 {
+	display: inline;
+	margin: 0;
+	font-family: 'Anton', sans-serif;
+}
+header h1 small {
+	display: block;
+}
+header img {
+	margin: 10px 16px 10px 16px;
+}
+	
+	body {
+		background: #e0e0e0;
+	}
+	
+	main {
+		background: rgb(255, 237, 239);
+	}
+	
+	nav {
+		background: rgb(255, 153, 0);
+	}
+
+/* Estilos do menu principal */
+nav {
+	text-align: center;
+	padding: -10px;
+	padding-right: 0px;
+	overflow: auto;
+	display: flex;
+	justify-content: flex-left;
+	background: rgb(255, 153, 0);
+	width: 100%;
+}
+nav a {
+
+	padding: 4px 8px 4px 8px;
+	margin: 3px;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font-size: 1.3rem;
+
+}
+
+/* Usando a pseudo-classe "hover" */
+nav a:hover {
+	background-color: rgb(255,255,0);
+	color: rgb(255,0,255);
+}        
+	content {
+		background-color: #ffffff;
+	}
+/* Estilos do rodapé */
+footer {
+	background-color: #BBBBBB;
+	color: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-between;
+	padding: 16px;
+}	
